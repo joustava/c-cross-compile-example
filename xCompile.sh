@@ -55,7 +55,7 @@ fi
 
 
 # define the toolchain and target names
-TOOLCHAIN_NAME="toolchain-mipsel_24kc_gcc-5.4.0_musl"
+TOOLCHAIN_NAME="toolchain-mips_24kc_gcc-5.4.0_musl"
 TARGET_NAME="target-mipsel_24kc_musl"
 
 # define the relative paths
@@ -83,12 +83,12 @@ TARGET_USR_LIB="$BUILDROOT_PATH/$TARGET_RELATIVE/usr/lib"
 export STAGING_DIR="BUILDROOT_PATH/$STAGING_DIR_RELATIVE"
 
 # define the compilers and such
-TOOLCHAIN_CC="$TOOLCHAIN_BIN/mipsel-openwrt-linux-gcc"
-TOOLCHAIN_CXX="$TOOLCHAIN_BIN/mipsel-openwrt-linux-g++"
-TOOLCHAIN_LD="$TOOLCHAIN_BIN/mipsel-openwrt-linux-ld"
+TOOLCHAIN_CC="$TOOLCHAIN_BIN/mips-openwrt-linux-gcc"
+TOOLCHAIN_CXX="$TOOLCHAIN_BIN/mips-openwrt-linux-g++"
+TOOLCHAIN_LD="$TOOLCHAIN_BIN/mips-openwrt-linux-ld"
 
-TOOLCHAIN_AR="$TOOLCHAIN_BIN/mipsel-openwrt-linux-ar"
-TOOLCHAIN_RANLIB="$TOOLCHAIN_BIN/mipsel-openwrt-linux-ranlib"
+TOOLCHAIN_AR="$TOOLCHAIN_BIN/mips-openwrt-linux-ar"
+TOOLCHAIN_RANLIB="$TOOLCHAIN_BIN/mips-openwrt-linux-ranlib"
 
 # define the FLAGS
 INCLUDE_LINES="-I $TOOLCHAIN_USR_INCLUDE -I $TOOLCHAIN_INCLUDE -I $TARGET_USR_INCLUDE -I $TARGET_INCLUDE"

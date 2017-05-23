@@ -60,9 +60,15 @@ RUN mv c-cross-compile-example/bin /home/engineer/ && \
     mv c-cross-compile-example/workspace workspace && \
     mv c-cross-compile-example/lede/.config lede/.config && \
     rm -rf c-cross-compile-example && \
+    lede/scripts/feeds update -a && \
+    lede/scripts/feeds install -a && \
     echo "alias xc='sh ~/bin/xCompile.sh -buildroot ~/lede'" > .bash_aliases
 
-CMD ["/bin/bash"]
+# WORKDIR /home/engineer/lede
+# RUN make defconfig
+
+# WORKDIR /home/engineer
+
 
 
 # TODO: make this https://www.linux.com/learn/put-talking-cow-your-linux-message-day

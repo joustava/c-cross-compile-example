@@ -1,0 +1,11 @@
+version: '2'
+services:
+  lede:
+    build: .
+    command: bash
+    volumes:
+      - lede-volume:/home/engineer/lede
+      - ./workspace:/home/engineer/workspace
+
+volumes:
+  lede-volume:

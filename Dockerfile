@@ -55,12 +55,12 @@ USER engineer
 WORKDIR /home/engineer
 
 RUN git clone https://git.lede-project.org/source.git lede
-RUN git clone https://github.com/joustava/c-cross-compile-example.git tmp/c-cross-compile-example
-RUN mv tmp/c-cross-compile-example/bin /home/engineer/ && \
-    mv tmp/c-cross-compile-example/workspace workspace && \
-    mv tmp/c-cross-compile-example/lede/.config lede/.config && \
-    rm -rf tmp && \
-    echo "alias xc='sh ~/bin/xCompile.sh -buildroot ~/lede'" > .bash_aliases \
+RUN git clone https://github.com/joustava/c-cross-compile-example.git c-cross-compile-example
+RUN mv c-cross-compile-example/bin /home/engineer/ && \
+    mv c-cross-compile-example/workspace workspace && \
+    mv c-cross-compile-example/lede/.config lede/.config && \
+    rm -rf c-cross-compile-example && \
+    echo "alias xc='sh ~/bin/xCompile.sh -buildroot ~/lede'" > .bash_aliases
 
 CMD ["/bin/bash"]
 
